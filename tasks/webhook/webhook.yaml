@@ -23,6 +23,7 @@ spec:
             key: bearer
       subscriptionID: 76958068-1939-4054-8d28-e738871d5ca0
     - type: sh.keptn.event.hello-world.triggered
+      sendFinished: true
       requests:
         - curl --request POST --data
           '{"variables":{"keptnProject":{"isSecret":false,"value":"{{
