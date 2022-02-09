@@ -17,14 +17,3 @@ spec:
             name: adotoken
             key: bearer
       subscriptionID: 15b4b524-2844-4885-b38f-9054f2f2bc88
-    - type: sh.keptn.event.hello-world.triggered
-      requests:
-        - "curl --header 'Content-Type: application.json' --request POST --data
-          '{\"token\":\"{{.env.secret_adotoken_bearer}}\"}'
-          https://webhook.site/4d796d31-f4f6-4c13-a2e6-ef5cb58d2db6"
-      envFrom:
-        - name: secret_adotoken_bearer
-          secretRef:
-            name: adotoken
-            key: bearer
-      subscriptionID: cbf757da-3d2e-416e-883d-882688cb3062
