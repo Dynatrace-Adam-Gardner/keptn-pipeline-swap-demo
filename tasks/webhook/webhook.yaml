@@ -5,6 +5,8 @@ metadata:
 spec:
   webhooks:
     - type: sh.keptn.event.hello-world.triggered
+      sendStarted: true
+      sendFinished: true
       requests:
         - "curl --header 'Authorization: Basic
           Ono0b25oeDR5b2ZzcTZoZmhpeWVkbHZvY2picnczcHBoNWl2Y2Y0d21zcmc0aWE1eXd4Y\
