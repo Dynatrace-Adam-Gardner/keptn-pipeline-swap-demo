@@ -1,0 +1,14 @@
+apiVersion: webhookconfig.keptn.sh/v1alpha1
+kind: WebhookConfig
+metadata:
+  name: webhook-configuration
+spec:
+  webhooks:
+    - type: sh.keptn.event.hello-world.triggered
+      requests:
+        - "curl --header 'Authorization: Basic
+          Ono0b25oeDR5b2ZzcTZoZmhpeWVkbHZvY2picnczcHBoNWl2Y2Y0d21zcmc0aWE1eXd4Y\
+          XE=' --request POST --data '{}'
+          https://dev.azure.com/AdamGardner0041/test/_apis/pipelines/4/runs?api\
+          -version=6.0-preview.1"
+      subscriptionID: 15b4b524-2844-4885-b38f-9054f2f2bc88
