@@ -4,8 +4,8 @@ metadata:
   name: shipyard-sockshop
 spec:
   stages:
-    - name: demostage
+    - name: "demostage"
       sequences:
-        - name: delivery
+        - name: "hello"
           tasks:
-          - name: evaluation
+          - name: "hello-world"
