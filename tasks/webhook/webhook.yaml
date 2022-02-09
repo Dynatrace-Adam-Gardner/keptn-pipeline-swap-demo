@@ -5,6 +5,8 @@ metadata:
 spec:
   webhooks:
     - type: sh.keptn.event.hello-world.triggered
+      sendStarted: true
+      sendFinished: true
       requests:
         - "curl --header 'Authorization: Basic {{.env.secret_adotoken_bearer}}'
           --header 'Content-Type: application/json' --request POST --data '{}'
