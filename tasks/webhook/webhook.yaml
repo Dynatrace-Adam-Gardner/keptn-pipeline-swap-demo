@@ -22,13 +22,3 @@ spec:
             name: adotoken
             key: bearer
       subscriptionID: 76958068-1939-4054-8d28-e738871d5ca0
-    - type: sh.keptn.event.hello-world.triggered
-      requests:
-        - curl --request POST --data
-          '{"variables":{"keptnProject":{"isSecret":false,"value":"{{
-          .data.project }}"},"keptnService":{"isSecret":false,"value":"{{
-          .data.service }}"},"keptnStage":{"isSecret":false,"value":"{{
-          .data.stage
-          }}"},"keptnContext":{"isSecret":false,"value":"KeptnContextFromWebhook"}}}'
-          https://webhook.site/4d796d31-f4f6-4c13-a2e6-ef5cb58d2db6
-      subscriptionID: e3652045-7d7e-4024-987b-d75ace9a9caf
