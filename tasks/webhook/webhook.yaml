@@ -1,0 +1,15 @@
+apiVersion: webhookconfig.keptn.sh/v1alpha1
+kind: WebhookConfig
+metadata:
+  name: webhook-configuration
+spec:
+  webhooks:
+    - type: sh.keptn.event.hello-world.triggered
+      requests:
+        - curl --request POST --data '{"data":{"project":"{{ .data.project
+          }}","result":"pass","service":"{{ .data.service }}","stage":"{{
+          .data.stage }}","status":"succeeded","message":"ADO pipeline
+          finished..."},"source":"azure-devops","specversion":"1.0","type":"sh.keptn.event.hello-world.finished","shkeptncontext":"{{
+          .shkeptncontext }}","triggeredid":"{{ .id }}"}'
+          https://webhook.site/4d796d31-f4f6-4c13-a2e6-ef5cb58d2db6?
+      subscriptionID: 75ccb6a7-3c6a-431a-bd20-8463e21da804
