@@ -5,6 +5,7 @@ metadata:
 spec:
   webhooks:
     - type: sh.keptn.event.hello-world.triggered
+      sendFinished: true
       requests:
         - curl --request POST --data
           '{"variables":{"keptnProject":{"isSecret":false,"value":"{{
