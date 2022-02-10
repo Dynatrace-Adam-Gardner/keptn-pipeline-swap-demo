@@ -21,23 +21,3 @@ spec:
             name: circleci
             key: apitoken
       subscriptionID: 9e50c7ba-43e9-4835-b152-819efbeff983
-    - type: sh.keptn.event.hello-world.triggered
-      requests:
-        - "curl --header 'Content-Type: application/json' --header
-          'Authorization: Basic {{.env.secret_adotoken_bearer}}' --request POST
-          --data
-          '{\"variables\":{\"keptnProject\":{\"isSecret\":false,\"value\":\"{{
-          .data.project
-          }}\"},\"keptnService\":{\"isSecret\":false,\"value\":\"{{
-          .data.service }}\"},\"keptnStage\":{\"isSecret\":false,\"value\":\"{{
-          .data.stage }}\"},\"keptnContext\":{\"isSecret\":false,\"value\":\"{{
-          .shkeptncontext
-          }}\"},\"keptnTriggeredId\":{\"isSecret\":false,\"value\":\"{{ .id
-          }}\"}}}'
-          https://dev.azure.com/AdamGardner0041/test/_apis/pipelines/4/runs?api"
-      envFrom:
-        - name: secret_adotoken_bearer
-          secretRef:
-            name: adotoken
-            key: bearer
-      subscriptionID: 16f0665c-cb20-40c0-a47a-ccc8a0923093
