@@ -25,12 +25,3 @@ spec:
             name: adotoken
             key: bearer
       subscriptionID: 75ccb6a7-3c6a-431a-bd20-8463e21da804
-    - type: sh.keptn.event.hello-world.triggered
-      requests:
-        - curl --request POST --data
-          '{"branch":"circleci-project-setup","parameters":{"keptnProject":"{{
-          .data.project }}","keptnService":"{{ .data.service
-          }}","keptnStage":"{{ .data.stage }}","keptnContext":"{{
-          .shkeptncontext }}","keptnTriggeredId":" {{ .id  }}"}}'
-          https://circleci.com/api/v2/project/github/Dynatrace-Adam-Gardner/circleci-demo/pipeline
-      subscriptionID: 9e50c7ba-43e9-4835-b152-819efbeff983
